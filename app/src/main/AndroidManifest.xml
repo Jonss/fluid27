@@ -8,7 +8,7 @@
         android:label="@string/timeline"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".actitities.MainActivity"
             android:label="@string/timeline" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
