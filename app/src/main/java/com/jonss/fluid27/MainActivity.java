@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         for (Post post: posts) {
-            Log.d("Post", post.getEmail() + " ==== " + post.getName());
+            Log.d("Post", post.toString());
         }
     }
 
@@ -50,9 +50,11 @@ public class MainActivity extends AppCompatActivity {
             JSONArray jsonArray = json.getJSONArray("posts");
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonPost = jsonArray.getJSONObject(i);
-                Post post = new Post();
-                post.setEmail(jsonPost.getString("email"));
-                post.setName(jsonPost.getString("name"));
+                String userName = jsonPost.getString("userName");
+                String avatar = jsonPost.getString("avatar");
+                String content = jsonPost.getString("content");
+                String imageUrl = jsonPost.getString("imageUrl");
+                Post post = new Post(userName, avatar, content, imageUrl);
                 posts.add(post);
             }
             return posts;

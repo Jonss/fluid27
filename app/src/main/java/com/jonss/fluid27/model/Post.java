@@ -4,22 +4,54 @@ package com.jonss.fluid27.model;
  * Created by neuromancer on 30/08/15.
  */
 public class Post {
-    private String name;
-    private String email;
+    private String userName;
+    private String avatar;
+    private String content;
+    private String imageUrl;
 
-    public void setEmail(String email) {
-        this.email = email;
+
+    public Post(String userName, String avatar, String content, String imageUrl) {
+        this.userName = userName;
+        this.avatar = avatar;
+        this.content = content;
+        this.imageUrl = imageUrl;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getUserName() {
+        return userName;
     }
 
-    public String getEmail() {
-        return email;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getName() {
-        return name;
+    public String getAvatar() {
+        return avatar;
     }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    @Override
+    public String toString() {
+        return getImageUrl() + " " + getUserName() + " " + getContent() + " " + getAvatar();
+    }
+
 }
