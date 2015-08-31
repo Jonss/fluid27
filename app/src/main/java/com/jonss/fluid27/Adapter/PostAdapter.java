@@ -53,14 +53,8 @@ public class PostAdapter extends BaseAdapter {
         TextView userName = (TextView) view.findViewById(R.id.post_user_name);
         userName.setText(post.getUserName());
 
-        TextView imageUrl = (TextView) view.findViewById(R.id.post_image_url);
-        imageUrl.setText(post.getImageUrl());
-
         TextView content = (TextView) view.findViewById(R.id.post_content);
         content.setText(post.getContent());
-
-        TextView avatar = (TextView) view.findViewById(R.id.post_avatar);
-        avatar.setText(post.getAvatar());
 
         return view;
     }

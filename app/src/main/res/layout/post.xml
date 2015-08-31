@@ -1,31 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    >
+    android:orientation="vertical">
 
-    <TextView
-        android:text="user name"
-        android:id="@+id/post_user_name"
+    <RelativeLayout
+        android:background="#ffffff"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingTop="16sp">
+
+        <ImageView
+            android:id="@+id/post_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/fluid"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/post_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="user name"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/post_avatar"
+            android:layout_toEndOf="@+id/post_avatar"
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+
+    </RelativeLayout>
 
     <TextView
-        android:text="avatar"
-        android:id="@+id/post_avatar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:text="Content lambda lambda lambda"
         android:id="@+id/post_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Content lambda lambda lambda"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="#ffffff"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:textSize="16dp"
+        android:textColor="#000000" />
 
-    <TextView
-        android:text="Image url"
+    <ImageView
         android:id="@+id/post_image_url"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="300sp"
+        android:src="@mipmap/fluid"
+        android:text="post_image"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="16dp"
+        />
 
 </LinearLayout>
