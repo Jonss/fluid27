@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.jonss.fluid27.ImageAsyncTask;
 import com.jonss.fluid27.R;
 import com.jonss.fluid27.model.Post;
+import com.squareup.picasso.Picasso;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -57,7 +58,8 @@ public class PostAdapter extends BaseAdapter {
         TextView content = (TextView) view.findViewById(R.id.post_content);
         content.setText(post.getContent());
 
-        new ImageAsyncTask(view).execute(post.getImageUrl());
+        ImageView postImage = (ImageView) view.findViewById(R.id.post_image);
+        Picasso.with(activity).load(post.getImageUrl()).into(postImage);
 
         return view;
     }
