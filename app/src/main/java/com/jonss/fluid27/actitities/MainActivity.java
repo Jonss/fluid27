@@ -41,16 +41,16 @@ public class MainActivity extends AppCompatActivity {
 
         posts = createPosts(builder.toString());
 
-        postsListView = (ListView) findViewById(R.id.posts_list_view);
-        PostAdapter postAdapter = new PostAdapter(posts, this);
-        postsListView.setAdapter(postAdapter);
+        setPostsOnView();
 
-        for (Post post: posts) {
-            Log.d("Post", post.toString());
-        }
     }
 
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setPostsOnView();
+    }
 
     public List<Post> createPosts(String line) {
         try {
@@ -58,11 +58,12 @@ public class MainActivity extends AppCompatActivity {
             JSONArray jsonArray = json.getJSONArray("posts");
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonPost = jsonArray.getJSONObject(i);
+                long id = jsonPost.getLong("id");
                 String userName = jsonPost.getString("userName");
                 String avatar = jsonPost.getString("avatar");
                 String content = jsonPost.getString("content");
                 String imageUrl = jsonPost.getString("imageUrl");
-                Post post = new Post(userName, avatar, content, imageUrl);
+                Post post = new Post(id, userName, avatar, content, imageUrl);
                 posts.add(post);
             }
             return posts;
@@ -87,5 +88,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    private void setPostsOnView(){
+        postsListView = (ListView) findViewById(R.id.posts_list_view);
+        PostAdapter postAdapter = new PostAdapter(posts, this);
+        postsListView.setAdapter(postAdapter);
     }
 }

@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.text.BidiFormatter;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -41,4 +42,5 @@ public class ImageAsyncTask extends AsyncTask<String, Void, Bitmap> {
         imageView.setImageBitmap(bitmap);
         this.cancel(true);
     }
+
 }

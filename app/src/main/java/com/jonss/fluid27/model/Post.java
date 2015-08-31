@@ -4,13 +4,15 @@ package com.jonss.fluid27.model;
  * Created by neuromancer on 30/08/15.
  */
 public class Post {
+    private long id;
     private String userName;
     private String avatar;
     private String content;
     private String imageUrl;
 
 
-    public Post(String userName, String avatar, String content, String imageUrl) {
+    public Post(long id, String userName, String avatar, String content, String imageUrl) {
+	    this.id = id;
         this.userName = userName;
         this.avatar = avatar;
         this.content = content;
@@ -54,4 +56,7 @@ public class Post {
         return getImageUrl() + " " + getUserName() + " " + getContent() + " " + getAvatar();
     }
 
+    public long getId() {
+        return id;
+    }
 }
