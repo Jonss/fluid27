@@ -27,7 +27,7 @@ public class Post {
         this.userName = userName;
     }
 
-    public String getAvatar() {
+    public String getAvatarUrl() {
         return avatar;
     }
 
@@ -53,7 +53,7 @@ public class Post {
 
     @Override
     public String toString() {
-        return getImageUrl() + " " + getUserName() + " " + getContent() + " " + getAvatar();
+        return getImageUrl() + " " + getUserName() + " " + getContent() + " " + getAvatarUrl();
     }
 
     public long getId() {
