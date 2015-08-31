@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jonss.fluid27.ImageAsyncTask;
 import com.jonss.fluid27.R;
 import com.jonss.fluid27.model.Post;
 
@@ -55,6 +56,8 @@ public class PostAdapter extends BaseAdapter {
 
         TextView content = (TextView) view.findViewById(R.id.post_content);
         content.setText(post.getContent());
+
+        new ImageAsyncTask(view).execute(post.getImageUrl());
 
         return view;
     }
