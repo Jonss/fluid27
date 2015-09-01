@@ -34,7 +34,7 @@ public class PostAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return posts.get(position);
     }
 
     @Override
@@ -58,9 +58,8 @@ public class PostAdapter extends BaseAdapter {
 
         holder.userNameText.setText(post.getUserName());
         holder.postContentText.setText(post.getContent());
-        Picasso.with(context).load(post.getImageUrl()).into(holder.postImage);
-        //Usar o crop aqui
         Picasso.with(context).load(post.getAvatarUrl()).into(holder.userAvatar);
+        Picasso.with(context).load(post.getImageUrl()).into(holder.postImage);
 
         return view;
     }
