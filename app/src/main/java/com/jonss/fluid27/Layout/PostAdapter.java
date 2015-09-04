@@ -5,14 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.jonss.fluid27.R;
 import com.jonss.fluid27.model.Post;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
+
+import static com.bumptech.glide.load.engine.DiskCacheStrategy.RESULT;
 
 /**
  * Created by neuromancer on 30/08/15.
@@ -58,10 +58,16 @@ public class PostAdapter extends BaseAdapter {
 
         holder.userNameText.setText(post.getUserName());
         holder.postContentText.setText(post.getContent());
-        Picasso.with(context).load(post.getAvatarUrl()).into(holder.userAvatar);
-        Picasso.with(context).load(post.getImageUrl()).into(holder.postImage);
+
+        Glide.with(context).load(post.getImageUrl())
+                .diskCacheStrategy(RESULT)
+                .into(holder.postImage);
+
+        Glide.with(context).load(post.getAvatarUrl())
+                .error(R.mipmap.fluid)
+                .diskCacheStrategy(RESULT)
+                .into(holder.userAvatar);
 
         return view;
     }
-
 }

@@ -34,16 +34,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String json = null;
         try {
-            String json = new PostAsyncTask().execute().get();
-            posts = createPosts(json);
+            json = new PostAsyncTask().execute().get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        setPostsOnView();
+        posts = createPosts(json);
 
+
+
+        setPostsOnView();
     }
 
     @Override

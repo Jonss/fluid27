@@ -21,17 +21,16 @@ public class PostAsyncTask extends AsyncTask<Object, Object, String> {
         try {
             URL url = new URL(URL_JSON);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            System.out.println("Response Code: " + connection.getResponseCode());
             InputStream in = new BufferedInputStream(connection.getInputStream());
 
             Scanner scanner = new Scanner(in);
 
             StringBuilder builder = new StringBuilder();
-            while(scanner.hasNext()) {
+            while (scanner.hasNext()) {
                 builder.append(scanner.nextLine());
             }
 
-            return  builder.toString();
+            return builder.toString();
         } catch (IOException e) {
             e.printStackTrace();
         }
