@@ -11,8 +11,7 @@
     android:label="@string/timeline"
     android:theme="@style/AppTheme" >
         <activity
-        android:name=".actitities.MainActivity"
-        android:label="@string/timeline" >
+        android:name=".actitities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

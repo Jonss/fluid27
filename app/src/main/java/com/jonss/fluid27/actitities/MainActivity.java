@@ -1,6 +1,7 @@
 package com.jonss.fluid27.actitities;
 
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,22 +16,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
 
     private List<Post> posts = new ArrayList<>();
     private ListView postsListView;
+    private SwipeRefreshLayout swipe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         listAllPosts();
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        setPostsOnView();
+        this.swipe = (SwipeRefreshLayout) findViewById(R.id.swipe);
+
+        swipe.setOnRefreshListener(this);
+
+        this.swipe.setColorSchemeColors(android.R.color.background_dark, android.R.color.background_light);
     }
 
     @Override
@@ -63,5 +65,10 @@ public class MainActivity extends AppCompatActivity {
         postsListView = (ListView) findViewById(R.id.posts_list_view);
         PostAdapter postAdapter = new PostAdapter(posts, this);
         postsListView.setAdapter(postAdapter);
+    }
+
+    @Override
+    public void onRefresh() {
+        listAllPosts();
     }
 }
