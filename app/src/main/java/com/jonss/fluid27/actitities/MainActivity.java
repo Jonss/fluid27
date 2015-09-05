@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
         swipe.setOnRefreshListener(this);
 
-        this.swipe.setColorSchemeColors(android.R.color.background_dark, android.R.color.background_light);
     }
 
     @Override
@@ -70,5 +69,6 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     @Override
     public void onRefresh() {
         listAllPosts();
+
     }
 }

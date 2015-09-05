@@ -9,7 +9,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -35,6 +34,7 @@ public class PostAsyncTask extends AsyncTask<Object, Object, List<Post>> {
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 Post post = postFromJsonArray(jsonObject);
+                System.out.print(post + "\n");
                 posts.add(post);
             }
         } catch (JSONException e) {
@@ -49,9 +49,9 @@ public class PostAsyncTask extends AsyncTask<Object, Object, List<Post>> {
     private StringBuilder getJsonFromAPI() throws IOException {
         URL url = new URL(URL_JSON);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        InputStream in = new BufferedInputStream(connection.getInputStream());
 
-        Scanner scanner = new Scanner(in);
+        InputStream inputStream = connection.getInputStream();
+        Scanner scanner = new Scanner(inputStream);
 
         StringBuilder builder = new StringBuilder();
         while (scanner.hasNext()) {

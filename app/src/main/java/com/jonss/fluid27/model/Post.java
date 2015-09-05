@@ -1,5 +1,7 @@
 package com.jonss.fluid27.model;
 
+import java.util.List;
+
 /**
  * Created by neuromancer on 30/08/15.
  */
@@ -12,7 +14,7 @@ public class Post {
 
 
     public Post(long id, String userName, String avatar, String content, String imageUrl) {
-	    this.id = id;
+        this.id = id;
         this.userName = userName;
         this.avatar = avatar;
         this.content = content;
@@ -23,40 +25,25 @@ public class Post {
         return userName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
     public String getAvatarUrl() {
         return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
     }
 
     public String getContent() {
         return content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
-
     public String getImageUrl() {
         return imageUrl;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
     @Override
     public String toString() {
-        return getImageUrl() + " " + getUserName() + " " + getContent() + " " + getAvatarUrl();
+        return getId() + " " + getImageUrl() + " " + getUserName() + " " + getContent() + " " + getAvatarUrl();
     }
 
     public long getId() {
         return id;
     }
+
 }
