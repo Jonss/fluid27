@@ -3,6 +3,7 @@ package com.jonss.fluid27.actitities;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     private void listAllPosts() {
         try {
             posts = new PostAsyncTask().execute().get();
+            Log.d("Quantidade de posts", String.valueOf(posts.size()));
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
