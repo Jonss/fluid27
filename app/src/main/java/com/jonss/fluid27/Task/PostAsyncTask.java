@@ -27,6 +27,8 @@ public class PostAsyncTask extends AsyncTask<Object, Object, List<Post>> {
 
     @Override
     protected List<Post> doInBackground(Object... params) {
+        //TODO ver isso filho!
+        posts.clear();
         try {
             StringBuilder builder = getJsonFromAPI();
 

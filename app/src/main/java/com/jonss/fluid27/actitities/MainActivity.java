@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
     private void listAllPosts() {
         try {
-            posts =  new PostAsyncTask().execute().get();
+            posts = new PostAsyncTask().execute().get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -69,6 +69,6 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     @Override
     public void onRefresh() {
         listAllPosts();
-
+        swipe.setRefreshing(false);
     }
 }
