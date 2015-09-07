@@ -72,5 +72,6 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     public void onRefresh() {
         listAllPosts();
         swipe.setRefreshing(false);
+        swipe.clearAnimation();
     }
 }

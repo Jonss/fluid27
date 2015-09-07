@@ -1,8 +1,25 @@
 <resources>
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        <item name="actionBarStyle">@style/FluidStyle</item>
     </style>
+
+
+    <style name="FluidStyle" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="titleTextStyle">@style/Fluid.TitleTextStyle</item>
+        <item name="subtitleTextStyle">@style/Fluid.SubTitleTextStyle</item>
+        <item name="background">@color/material_blue_grey_950</item>
+    </style>
+
+    <style name="Fluid.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Fluid.SubTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
 
 </resources>
