@@ -4,7 +4,6 @@
         <item name="actionBarStyle">@style/FluidStyle</item>
     </style>
 
-
     <style name="FluidStyle" parent="@style/Widget.AppCompat.ActionBar">
         <item name="titleTextStyle">@style/Fluid.TitleTextStyle</item>
         <item name="subtitleTextStyle">@style/Fluid.SubTitleTextStyle</item>
@@ -20,6 +19,5 @@
         <item name="android:textColor">#fff</item>
         <item name="android:textStyle">normal</item>
     </style>
-
 
 </resources>

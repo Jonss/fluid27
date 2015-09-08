@@ -21,6 +21,10 @@ public class Post {
         this.imageUrl = imageUrl;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public String getUserName() {
         return userName;
     }
@@ -40,10 +44,6 @@ public class Post {
     @Override
     public String toString() {
         return getId() + " " + getImageUrl() + " " + getUserName() + " " + getContent() + " " + getAvatarUrl();
-    }
-
-    public long getId() {
-        return id;
     }
 
 }
