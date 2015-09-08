@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     private ListView postsListView;
     private SwipeRefreshLayout swipe;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

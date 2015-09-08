@@ -18,16 +18,16 @@ import java.util.List;
  */
 public class PostAsyncTask extends AsyncTask<Object, Object, List<Post>> {
 
-    private static String URL_JSON = "http://fluid-challenge.herokuapp.com/posts/json";
+    private static String URL_JSON = "http://fluid-challenge.herokuapp.com/posts/json/";
     private static List<Post> posts = new ArrayList<>();
     private PostProducer producer = new PostProducer();
 
     @Override
     protected List<Post> doInBackground(Object... params) {
-        posts.clear();
+        cleanList();
         JSONArray jsonArray;
         try {
-            StringBuilder builder = new JsonProducer().getJsonFromAPI(URL_JSON);
+            StringBuilder builder = new JsonProducer().getJsonFromAPI(URL_JSON + posts.size());
             jsonArray = new JSONArray(builder.toString());
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
@@ -40,4 +40,8 @@ public class PostAsyncTask extends AsyncTask<Object, Object, List<Post>> {
         return posts;
     }
 
+
+    private void cleanList(){
+        posts.clear();
+    }
 }
