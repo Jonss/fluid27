@@ -28,7 +28,6 @@ public class PostAsyncTask extends AsyncTask<Object, Object, List<Post>> {
 
     @Override
     protected List<Post> doInBackground(Object... params) {
-        //TODO ver isso filho!
         posts.clear();
         JSONArray jsonArray;
         try {
@@ -37,7 +36,6 @@ public class PostAsyncTask extends AsyncTask<Object, Object, List<Post>> {
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 Post post = postFromJsonArray(jsonObject);
-                System.out.print(post + "\n");
                 posts.add(post);
             }
         } catch (JSONException e) {

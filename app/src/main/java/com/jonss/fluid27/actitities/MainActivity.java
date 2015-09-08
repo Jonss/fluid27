@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     private void listAllPosts() {
         try {
             posts = new PostAsyncTask().execute().get();
-            Log.d("Quantidade de posts", String.valueOf(posts.size()));
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
