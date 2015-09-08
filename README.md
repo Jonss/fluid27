@@ -44,16 +44,25 @@ Adapter
 
 Para criar um layout bacana. Porém fiz um esquema legal, o adapter tem o comportamento padrão de criar um novo elemento quando o scroll é feito e "matar" o adapter de cima que não é mais apresentado. Mas isso consome muito da VM android e quanto menos consumo, melhor. Eu verifico se tenho um adapter não sendo usado e se tiver, eu uso ele com as informações de um novo post. Então, é feito a reciclagem. 
 
-Além de não aumentar o processamento, não agrido o meio ambiente (essa foi ruim, eu sei).
+Além de não melhorar o processamento, não agrido o meio ambiente (essa foi ruim, eu sei).
 
 Asynctask
 -----------------------------
 
 Faço a requisição assincronamente para buscar o JSON contendo os posts na app. O código é meio feio (ele me incomoda), mas funciona e não inclui nenhuma biblioteca que faria o mesmo por mim. Transformo o JsonArray em posts, incluo em uma List de posts e tcha-rá! Trago pra view usando o Adapter.
 
+Swipe refreshLayout
+-------------------------
+
+Para atualizar a lista de posts sem ter q sair do app, o usuário pode puxar para cima e um swipe vai mostrar atualizando. O método vai chamar a atualização e pronto, atualizado a View é descartada e os novos posts são mostrados.
+
+
 #Sobre a API
 
-Escrevi usando rails (sem palavrões, por favor) e o como PaaS o heroku, pra executar a aplicação. A motivação foi "Preciso fazer algo rápido e q não dê trabalho" e assim foi feito!
+Escrevi usando ruby on rails (sem palavrões, por favor) e o heroku, pra executar a aplicação. A motivação foi "Preciso fazer algo rápido e q não dê trabalho" e assim foi feito!
+
+
+
 
 #Licença
 
