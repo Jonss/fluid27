@@ -7,7 +7,7 @@
     <style name="FluidStyle" parent="@style/Widget.AppCompat.ActionBar">
         <item name="titleTextStyle">@style/Fluid.TitleTextStyle</item>
         <item name="subtitleTextStyle">@style/Fluid.SubTitleTextStyle</item>
-        <item name="background">@color/material_blue_grey_950</item>
+        <item name="background">@color/fluid_blue</item>
     </style>
 
     <style name="Fluid.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
@@ -20,4 +20,6 @@
         <item name="android:textStyle">normal</item>
     </style>
 
+
+    <color name="fluid_blue">#223640</color>
 </resources>
