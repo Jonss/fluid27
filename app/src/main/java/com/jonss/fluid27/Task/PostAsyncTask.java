@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class PostAsyncTask extends AsyncTask<Object, Object, List<Post>> {
 
-    private static String URL_JSON = "http://fluid-challenge.herokuapp.com/posts/json/";
+    private static String URL_JSON = "http://fluid-challenge.herokuapp.com/posts/json";
     private static List<Post> posts = new ArrayList<>();
     private PostProducer producer = new PostProducer();
 
@@ -27,7 +27,7 @@ public class PostAsyncTask extends AsyncTask<Object, Object, List<Post>> {
         cleanList();
         JSONArray jsonArray;
         try {
-            StringBuilder builder = new JsonProducer().getJsonFromAPI(URL_JSON + posts.size());
+            StringBuilder builder = new JsonProducer().getJsonFromAPI(URL_JSON);
             jsonArray = new JSONArray(builder.toString());
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
