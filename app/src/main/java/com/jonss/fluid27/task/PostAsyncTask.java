@@ -1,9 +1,9 @@
-package com.jonss.fluid27.Task;
+package com.jonss.fluid27.task;
 
 import android.os.AsyncTask;
 
-import com.jonss.fluid27.Web.JsonProducer;
-import com.jonss.fluid27.Web.PostProducer;
+import com.jonss.fluid27.web.JsonProducer;
+import com.jonss.fluid27.web.PostProducer;
 import com.jonss.fluid27.model.Post;
 
 import org.json.JSONArray;

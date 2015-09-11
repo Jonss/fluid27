@@ -1,4 +1,4 @@
-package com.jonss.fluid27.Web;
+package com.jonss.fluid27.web;
 
 import com.jonss.fluid27.model.Post;
 

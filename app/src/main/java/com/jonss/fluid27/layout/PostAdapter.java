@@ -1,4 +1,4 @@
-package com.jonss.fluid27.Layout;
+package com.jonss.fluid27.layout;
 
 import android.content.Context;
 import android.view.LayoutInflater;
