@@ -11,7 +11,7 @@ Sim, o post pede o endereço da imagem porque o heroku não salva imagens, eu pr
 Quero atualizar os posts sem sair do app pq ele é muito legal mew!
 -----------------------------
 
-Simples, vai até o começo da app e puxa pra cima. Ele vai executar a atualização e se tiver algo novo na API, vai baixar e novos posts maneirões estarão lá!
+Simples, vai até o começo da app e puxa pra cima. Ele vai executar a atualização e se tiver algo novo na API, vai baixar e novos posts maneirões!
 
 Quero instalar o app!
 -----------------------------
