@@ -59,7 +59,7 @@ Para atualizar a lista de posts sem ter q sair do app, o usuário pode puxar par
 
 #Sobre a API
 
-Escrevi usando ruby on rails (sem palavrões, por favor) e o heroku, pra executar a aplicação. A motivação foi "Preciso fazer algo rápido e q não dê trabalho" e assim foi feito!
+Escrevi usando Ruby on Rails e o heroku, pra executar a aplicação. Adiciono um post e recebo um Json no app.
 
 
 
