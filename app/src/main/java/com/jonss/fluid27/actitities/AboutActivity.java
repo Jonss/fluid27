@@ -22,8 +22,7 @@ public class AboutActivity extends AppCompatActivity {
         backToMainText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AboutActivity.this, MainActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
     }

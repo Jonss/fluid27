@@ -40,7 +40,6 @@ public class PostAsyncTask extends AsyncTask<Object, Object, List<Post>> {
         return posts;
     }
 
-
     private void cleanList(){
         posts.clear();
     }
