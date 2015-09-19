@@ -11,12 +11,12 @@ Sim, o post pede o endereço da imagem porque o heroku não salva imagens, eu pr
 Quero atualizar os posts sem sair do app pq ele é muito legal mew!
 -----------------------------
 
-Simples, vai até o começo da app e puxa pra cima. Ele vai executar a atualização e se tiver algo novo na API, vai baixar e novos posts maneirões!
+Simples, vai até o começo da app e puxa pra cima. Ele vai executar a atualização e se tiver algo novo na API, vai baixar e novos posts maneirões estarão na Timeline!
 
 Quero instalar o app!
 -----------------------------
 
-hmmmm... você pode baixar aqui http://bit.ly/1FvM0Av (10/09/15 23:30), baixar o .zip ou forkar o projeto, gerar um novo e ser feliz =D
+hmmmm... você pode baixar aqui http://bit.ly/1FvM0Av (18/09/15 23:30), baixar o .zip ou forkar o projeto, gerar um novo e ser feliz =D
 
 
 #Bibliotecas externas
@@ -59,7 +59,7 @@ Para atualizar a lista de posts sem ter q sair do app, o usuário pode puxar par
 
 #Sobre a API
 
-Escrevi usando Ruby on Rails e o heroku, pra executar a aplicação. Adiciono um post e recebo um Json no app.
+Escrevi usando Ruby on Rails e o heroku pra executar a aplicação. Adiciono um post e recebo um Json no app.
 
 
 
