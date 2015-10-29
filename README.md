@@ -1,18 +1,6 @@
 # fluid27
 Challenge accepted!
 
-Quero colocar 20 mil imagens!
------------------------------
-
-Vá no endereço https://fluid-challenge.herokuapp.com/posts/new e crie um novo post. Pra atualizar no app,puxa ele pra cima pra ele executar o swipe e atualizar e tchá-rá! Novas imagens aparecem para pessoas boas.
-
-Sim, o post pede o endereço da imagem porque o heroku não salva imagens, eu precisaria colocar em outro endereço ou usar uma API tipo do photobucket pra isso. Como esse não era  foco...
-
-Quero atualizar os posts sem sair do app pq ele é muito legal mew!
------------------------------
-
-Simples, vai até o começo da app e puxa pra cima. Ele vai executar a atualização e se tiver algo novo na API, vai baixar e novos posts maneirões estarão na Timeline!
-
 Quero instalar o app!
 -----------------------------
 
